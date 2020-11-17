@@ -1,0 +1,226 @@
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@700&family=Rubik:wght@300&display=swap');
+
+
+* {box-sizing: border-box;}
+.row::after {content: ""; clear: both; display: table;}
+[class*="col-"] {float: left;}
+
+/* Para celulares: */
+[class*="col-"] {
+    width: 100%;
+  }
+
+@media only screen and (max-width: 768px) {
+      body{
+      }
+    }
+
+/* Grillas */
+@media only screen and (min-width: 768px) {
+    /* Para escritorio: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+
+/* General */
+  .full-height {height: 100%;}
+
+  html, body {
+    height:100%;
+    margin: 0;
+  }
+
+#pag1{background-color:#D0838D;}
+#pag2{background-color:#D1B190;}
+#pag3{background-color:#2E5BA4;}
+
+/* Tipografias */
+h1{
+  font-family: 'Martel', serif;
+  color: white;
+  text-align: center;
+  margin-top: 6%;
+}
+
+p{
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+/* Ilustraciones */
+.ilu{
+  width: 60%;
+  height: 60%;
+  display: flex;
+  margin: auto;
+}
+
+.ilu_1{
+  width: 80%;
+  height: 80%;
+  position:relative;
+  cursor: move;
+}
+
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+/* Menu circulos*/
+.menu {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.menu a {
+  text-align: center;
+  padding: 12px 20px;
+  transition: all 0.2s ease-out;
+  color:rgba(255, 255, 255, 0.445);
+  font-size: 100%;
+}
+
+.menu a:hover {
+  color:white;
+  }
+
+.active {
+  color: white;
+  }
+
+/* Pagina 1 */
+
+.line {
+      position: relative;
+      width: 15ch;
+      margin: 0 auto;
+      margin-top: 6%;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+}
+
+/*Animation*/
+
+.title {
+      animation: typewriter 3s steps(16) 1s,
+      blinkTextCursor 500ms steps(16) infinite normal;
+}
+
+@keyframes typewriter {
+      from {width: 0;}
+      to {width: 16ch;}
+}
+
+@keyframes blinkTextCursor {
+      from {border-right-color: rgba(255, 255, 255, 0.75);}
+      to {border-right-color: transparent;}
+}
+
+
+.imagen_1{
+  width: 60%;
+  height: 400px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-image: url("ilustraciones/ilustraciones-01.svg");
+  background-position: center;
+  display: flex;
+  margin: auto;
+}
+
+/* Pagina 2 */
+
+.ilu_2{
+  width: 70%;
+  height: 70%;
+  display: flex;
+  margin: auto;
+}
+
+#pibe1{
+  margin-right: 0;
+  margin-left: 40%;
+}
+
+#pibe2{
+  margin-left: 0;
+  margin-right: 40%;
+}
+
+.animation_1{
+  animation: deslizamiento_2 3s;
+  -webkit-animation: deslizamiento_2 3s;
+  animation-fill-mode: forwards;
+}
+
+  @keyframes deslizamiento_2 {
+     0%   {transform:translate(0)}
+     100%  {transform:translate(-50%)}
+   }
+
+.animation_2{
+  animation: deslizamiento 3s;
+  -webkit-animation: deslizamiento 3s;
+  animation-fill-mode: forwards;
+}
+
+  @keyframes deslizamiento {
+     0%   {transform:translate(0)}
+     100%  {transform:translate(50%)}
+   }
+
+/* Tercera pagina */
+#ilu_3{
+  width: 60%;
+  height: 60%;
+  display: flex;
+  margin: auto;
+}
+
+#oculto_3{
+  position: absolute;
+  z-index: 2;
+  bottom: 0%;
+  display: none;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
