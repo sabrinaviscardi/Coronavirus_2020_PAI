@@ -61,10 +61,16 @@ function Pagina2(){
   pib1.classList.add("animation_1");
   let pib2 = document.getElementById('pibe2');
   pib2.classList.add("animation_2");
+  document.getElementById("metroymedio").style.display = "block";
 }
 
 // Tercera página
 
 function gel() {
   document.getElementById("oculto_3").style.display = "block";
+}
+
+function desactivate_gel() {
+  document.getElementById("oculto_3").style.display = "none";
+  return false;
 }
