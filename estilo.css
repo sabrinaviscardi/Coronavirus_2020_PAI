@@ -65,6 +65,7 @@ p{
   height: 60%;
   display: flex;
   margin: auto;
+	touch-action: none;
 }
 
 .ilu_1{

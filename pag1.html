@@ -19,14 +19,15 @@
   <div class="row">
     <div class="col-2">
       <img class="ilu_1" src="ilustraciones/ilustraciones-06.svg" alt=""
-      ondragover="stopDrag()" ondragstart="startDrag(event)" draggable="true"> <!-- ondrag="dragging(event)"> -->
+			ontouchstart="startDrag(event)"
+			ondragstart="startDrag(event)" ondrop="stopDrag()" ondragover="stopDrag()" draggable="true"> <!-- ondrag="dragging(event)"> -->
     </div>
     <div class="col-8">
-      <div class="imagen_1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="imagen_1" ondrop="stopDrag()" ondragover="stopDrag()"></div>
     </div>
     <div class="col-2">
       <img class="ilu_1" src="ilustraciones/ilustraciones-07.svg" alt=""
-      ondragover="stopDrag()" ondragstart="startDrag(event)" draggable="true">
+      ondragover="stopDrag()" ondrop="stopDrag()" ondragstart="startDrag(event)" draggable="true">
     </div>
   </div>
 

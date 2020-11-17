@@ -11,7 +11,7 @@ function startDrag(e) {
 				// IE uses srcElement, others use target
 				targ = e.target ? e.target : e.srcElement;
 
-				if (targ.className != 'dragme') {return};
+				if (targ.className != 'ilu_1') {return};
 				// calculate event X, Y coordinates
 					offsetX = e.clientX;
 					offsetY = e.clientY;
@@ -25,12 +25,13 @@ function startDrag(e) {
 				coordX = parseInt(targ.style.left);
 				coordY = parseInt(targ.style.top);
 				drag = true;
-
 				// move div element
+				document.ontouchmove=dragDiv;
 					document.onmousemove=dragDiv;
           return false;
 	}
 			function dragDiv(e) {
+
 				if (!drag) {return};
 				if (!e) { var e= window.event};
 				// var targ=e.target?e.target:e.srcElement;
@@ -39,15 +40,18 @@ function startDrag(e) {
 				targ.style.top=coordY+e.clientY-offsetY+'px';
 				return false;
 			}
+
 			function stopDrag() {
+				//event.preventDefault();
+				//console.log("no ta entrando");
 				drag=false;
         return false;
 			}
 
-      // window.onload = function() {
+       window.onload = function() {
 			// 	document.onmousedown = startDrag;
-			// 	document.onmouseup = stopDrag;
-			// }
+			 	document.onmouseup = stopDrag;
+			 }
 
 // Segunda Página
 
