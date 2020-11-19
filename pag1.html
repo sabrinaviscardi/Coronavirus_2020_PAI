@@ -15,12 +15,12 @@
       <h1 class="title line">Tomemos medidas.</h1>
     </div>
 
-  <!-- Ilustraciones -->
-  <div class="row">
+  <!-- Arrastre -->
+  <!-- <div class="row">
     <div class="col-2">
       <img class="ilu_1" src="ilustraciones/ilustraciones-06.svg" alt=""
 			ontouchstart="startDrag(event)"
-			ondragstart="startDrag(event)" ondrop="stopDrag()" ondragover="stopDrag()" draggable="true"> <!-- ondrag="dragging(event)"> -->
+			ondragstart="startDrag(event)" ondrop="stopDrag()" ondragover="stopDrag()" draggable="true">
     </div>
     <div class="col-8">
       <div class="imagen_1" ondrop="stopDrag()" ondragover="stopDrag()"></div>
@@ -29,10 +29,20 @@
       <img class="ilu_1" src="ilustraciones/ilustraciones-07.svg" alt=""
       ondragover="stopDrag()" ondrop="stopDrag()" ondragstart="startDrag(event)" draggable="true">
     </div>
+  </div> -->
+  <div class="row">
+    <div class="col-6">
+      <img id="persona1" class="imagen_1 hoveranimation" src="ilustraciones/ilustraciones-14.svg"
+      alt="" onclick="PutMask1()" draggable="false">
+    </div>
+    <div class="col-6">
+      <img id="persona2" class="imagen_1 hoveranimation" src="ilustraciones/ilustraciones-15.svg"
+      alt="" onclick="PutMask2()" draggable="false">
+    </div>
   </div>
 
   <!-- Texto -->
-    <p>Arrastra para protegerlos.</p>
+    <p id="clickmask">Click para protegerlos.</p>
 
   <!--Menu-->
     <div class="menu">
