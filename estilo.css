@@ -6,11 +6,12 @@
 .row::after {content: ""; clear: both; display: table;}
 [class*="col-"] {float: left;}
 
-/* Para celulares: */
+/* Para celulares:
+esto por que iria? */
 /* [class*="col-"] {
     width: 100%;
   } */
-  
+
 
 @media only screen and (max-width: 768px) {
       h1{font-size:150%;
@@ -22,19 +23,19 @@
 }
 
 /* Grillas */
-    /* Para escritorio: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+  /* Para escritorio: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
 
 /* General */
   .full-height {height: 100%;}
@@ -42,14 +43,15 @@
   html, body {
     height:100%;
     margin: 0;
+    overflow: hidden;
   }
 
+/* Background color */
 #pag1{background-color:#D0838D;}
 #pag2{background-color:#D1B190;}
 #pag3{background-color:#2E5BA4;}
 
 /* Tipografias */
-
 @media only screen and (min-width: 768px) {
 h1{
   font-family: 'Martel', serif;
@@ -65,17 +67,7 @@ p{
   text-align: center;
 }
 
-/* Ilustraciones */
-
-/*
-#div1 {
-  width: 350px;
-  height: 70px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
-} */
-
-/* Menu circulos*/
+/* Menu */
 .menu {
     width: 100%;
     text-align: center;
@@ -127,73 +119,51 @@ p{
 .title {
       animation: typewriter 2s steps(16) 1s,
       blinkTextCursor 500ms steps(16) infinite normal;
+      -webkit-animatin: typewriter 2s steps(16) 1s,
+      blinkTextCursor 500ms steps(16) infinite normal;
 }
 
-@keyframes typewriter {
-      from {width: 0;}
-      to {width: 16ch;}
-}
+@keyframes typewriter { from {width: 0;} to {width: 16ch;} }
+@keyframes blinkTextCursor { from {border-right-color: rgba(255, 255, 255, 0.75);} to {border-right-color: transparent;} }
 
-@keyframes blinkTextCursor {
-      from {border-right-color: rgba(255, 255, 255, 0.75);}
-      to {border-right-color: transparent;}
-}
-
+@-webkit-keyframes typewriter { from {width: 0;} to {width: 16ch;} }
+@-webkit-keyframes blinkTextCursor { from {border-right-color: rgba(255, 255, 255, 0.75);} to {border-right-color: transparent;} }
 
 .imagen_1{
   width: 45%;
   display: flex;
+  cursor: pointer;
 }
 
 /* Para desktop */
 @media only screen and (min-width: 768px) {
-.line{
-  margin: 6% auto 0 auto;
-}
-#persona1{
-  margin: 7% 0 7% 60%;
-}
+  .line{
+    margin: 6% auto 0 auto;
+  }
+  #persona1{
+    margin: 7% 0 7% 60%;
+  }
 
-#persona2{
-  margin: 7% 40% 7% 0;
-}
+  #persona2{
+    margin: 7% 40% 7% 0;
+  }
 }
 
 /* Para celular */
 @media only screen and (max-width: 768px) {
-.line{
-  margin: 25% auto 0 auto;
-}
-#persona1{
-  margin: 7% 0 7% 60%;
-}
-
-#persona2{
-  margin: 7% 40% 7% 0;
-}
+  .line{
+    margin: 25% auto 0 auto;
+  }
+  #persona2{
+    width: 100%;
+    margin: 25% 0 25% 60%;
+  }
+  .oculto_1{
+    display: none;
+  }
 }
 
 /* Pagina 2 */
-/* Para desktop */
-
-@media only screen and (min-width: 768px) {
-.ilu_2{
-  width: 60%;
-  height: 60%;
-  display: flex;
-  margin: auto;
-}
-
-#pibe1{
-  margin-right: 0;
-  margin-left: 40%;
-}
-
-#pibe2{
-  margin-left: 0;
-  margin-right: 40%;
-}
-}
 
 .animation_1{
   animation: deslizamiento_2 3s;
@@ -212,13 +182,16 @@ p{
   margin-bottom: 2%;
 }
 
+#boton{
+  display: block;
+}
+
 hr {
    height: 5%;
    background-color: green;
    border-color: transparent;
    -webkit-animation:shadow-drop-center .4s cubic-bezier(.25,.46,.45,.94) both;animation:shadow-drop-center .4s cubic-bezier(.25,.46,.45,.94) both;
    animation: scale-up-bottom 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-
  }
 
 
@@ -226,10 +199,6 @@ hr {
    color: green;
    animation: scale-up-bottom 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
  }
-
-#boton{
-  display: block;
-}
 
  @keyframes scale-up-bottom {
    0% {
@@ -248,44 +217,60 @@ hr {
  }
 
 /* Para desktop */
-
 @media only screen and (min-width: 768px) {
-
-@keyframes deslizamiento_2 {
-   0%   {transform:translate(0)}
-   100%  {transform:translate(-50%)}
- }
-@keyframes deslizamiento {
-   0%   {transform:translate(0)}
-   100%  {transform:translate(50%)}
- }
- hr{
-   width: 20%;
- }
-}
+  .ilu_2{
+    width: 60%;
+    height: 60%;
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+  }
+  #pibe1{
+    margin-right: 0;
+    margin-left: 40%;
+  }
+  #pibe2{
+    margin-left: 0;
+    margin-right: 40%;
+  }
+  @keyframes deslizamiento_2 {
+     0%   {transform:translate(0)}
+     100%  {transform:translate(-50%)}
+   }
+  @keyframes deslizamiento {
+     0%   {transform:translate(0)}
+     100%  {transform:translate(50%)}
+   }
+   hr{
+     width: 20%;
+   }
+   #pibe1{
+     margin-left: 45%;
+   }
+  }
 
 /* Para Mobile */
 
 @media only screen and (max-width: 768px) {
       .ilu_2{
-        width: 100%;
+        width: 125%;
         margin-top: 25%;
         margin-bottom: 15%;
       }
       #pibe1{
-        margin-left: 12%;
+        margin-left: 2%;
       }
       #pibe2{
-        margin-left:-5%;
+        margin-left:-10%;
       }
       @keyframes deslizamiento_2 {
          0%   {transform:translate(0)}
-         100%  {transform:translate(-30%)}
+         100%  {transform:translate(-20%)}
        }
 
       @keyframes deslizamiento {
          0%   {transform:translate(0)}
-         100%  {transform:translate(30%)}
+         100%  {transform:translate(20%)}
        }
        hr{
          width: 50%;
@@ -301,6 +286,7 @@ hr {
 #ilu_3{
   display: flex;
   margin: auto;
+  cursor: pointer;
 }
 
 .hoveranimation:hover{
@@ -317,11 +303,14 @@ hr {
   position: absolute;
   z-index: 2;
   display: none;
+  width: 100%;
+  height: 100%;
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
   animation-iteration-count: infinite;
+
 }
 
 @keyframes shake {
@@ -345,20 +334,24 @@ hr {
 /* Para desktop */
 @media only screen and (min-width:768px){
   #ilu_3{
-    height: 60%;
+    height: 45%;
+    margin-top: 4%;
+    margin-bottom: 4%;
   }
   #oculto_3{
     bottom: 0%;
+    background-image: url("ilustraciones/ilustraciones-10.svg");
   }
 }
 
 /* Para mobile */
 @media only screen and (max-width:768px){
   #ilu_3{
-    height: 40%;
+    height: 45%;
   }
   #oculto_3{
-    height: auto;
     width: 100%;
+    bottom: 0%;
+    background-image: url("ilustraciones/ilustraciones-11.svg");
   }
 }
