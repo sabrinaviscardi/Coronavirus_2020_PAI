@@ -10,6 +10,7 @@
 /* [class*="col-"] {
     width: 100%;
   } */
+  
 
 @media only screen and (max-width: 768px) {
       h1{font-size:150%;
@@ -49,7 +50,7 @@
 
 /* Tipografias */
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
 h1{
   font-family: 'Martel', serif;
   color: white;
@@ -124,7 +125,7 @@ p{
 }
 
 .title {
-      animation: typewriter 3s steps(16) 1s,
+      animation: typewriter 2s steps(16) 1s,
       blinkTextCursor 500ms steps(16) infinite normal;
 }
 
@@ -145,7 +146,7 @@ p{
 }
 
 /* Para desktop */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
 .line{
   margin: 6% auto 0 auto;
 }
@@ -159,16 +160,23 @@ p{
 }
 
 /* Para celular */
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 768px) {
 .line{
   margin: 25% auto 0 auto;
+}
+#persona1{
+  margin: 7% 0 7% 60%;
+}
+
+#persona2{
+  margin: 7% 40% 7% 0;
 }
 }
 
 /* Pagina 2 */
 /* Para desktop */
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
 .ilu_2{
   width: 60%;
   height: 60%;
