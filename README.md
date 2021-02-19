@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, We're Brenda and Sabrina</h1>
-<h3 align="center">Friends and PAI (Interactive Audiovisual Production) classmates.</h3>
+<h3 align="center">Friends and designers.</h3>
 
 
 <h2 align="left">Coronavirus</h2>
