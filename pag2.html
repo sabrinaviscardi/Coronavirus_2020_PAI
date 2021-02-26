@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tomemos Medidas.</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+  <body id="pag2">
+  <div class="container">
+
+    <!-- Titulo -->
+    <div class="row">
+      <div class="col-12">
+          <h1>Tomemos medidas.</h1>
+      </div>
+    </div>
+
+    <!-- Ilustraciones -->
+    <div class="row">
+      <div class="col-6">
+        <img id="pibe1" class="ilu_2 hoveranimation" onclick="Pagina2()" src="ilustraciones/ilustraciones-09.svg" alt="">
+      </div>
+      <div class="col-6">
+        <img id="pibe2" class="ilu_2 hoveranimation" onclick="Pagina2()" src="ilustraciones/ilustraciones-08.svg" alt="">
+      </div>
+    </div>
+
+    <!-- Linea 1.5 m -->
+    <div class="row">
+      <div class="col-12" id="metroymedio">
+        <hr>
+        <p>1.5 metros</p>
+      </div>
+    </div>
+
+    <!-- Texto -->
+    <div class="row">
+      <div class="col-12">
+        <p id="boton" onclick="Pagina2()">Click para protegerlos.</p>
+      </div>
+    </div>
+
+    <!--Menu-->
+    <div class="row">
+      <div class="col-12 menu">
+          <a href = "index.html"><i class="fa fa-circle"></i></a>
+          <a href = "pag2.html"><i class="active fa fa-circle"></i></a>
+          <a href = "pag3.html"><i class="fa fa-circle"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ilustraciones basadas en: <a href="https://www.freepik.com/vectors/people">-->
+
+  <script>
+  function Pagina2(){
+    let pib1 = document.getElementById('pibe1');
+    pib1.classList.add("animation_1");
+    pib1.classList.remove("hoveranimation");
+    let pib2 = document.getElementById('pibe2');
+    pib2.classList.add("animation_2");
+    pib2.classList.remove("hoveranimation");
+    document.getElementById("metroymedio").style.display = "block";
+    document.getElementById("boton").style.display = "none";
+  }
+  </script>
+
+  </body>
+</html>

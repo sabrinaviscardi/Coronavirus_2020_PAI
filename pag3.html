@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tomemos Medidas.</title>
+      <link rel="stylesheet" type="text/css" href="estilo.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body id="pag3">
+    <div class="container">
+
+    <!-- Titulo -->
+    <div class="row">
+      <div class="col-12">
+          <h1>Tomemos medidas.</h1>
+      </div>
+    </div>
+
+    <!-- Ilustraciones -->
+    <div class="row">
+      <div class="col-12">
+        <img id="ilu_3" class="hoveranimation" onclick="gel()" src="ilustraciones/ilustraciones-07.svg" alt="">
+        <div class="gel" id="oculto_3" onclick="desactivate_gel()"></div>
+      </div>
+    </div>
+
+    <!-- Texto -->
+    <div class="row">
+      <div class="col-12">
+        <p id="clickgel" onclick="gel()">Click para sanitizar.</p>
+      </div>
+    </div>
+
+    <!--Menu-->
+    <div class="row">
+      <div class="col-12 menu">
+          <a href = "index.html"><i class="fa fa-circle"></i></a>
+          <a href = "pag2.html"><i class="fa fa-circle"></i></a>
+          <a href = "pag3.html"><i class="active fa fa-circle"></i></a>
+      </div>
+    </div>
+    </div>
+
+  <!-- Ilustraciones basadas en: <a href="https://www.freepik.com/vectors/people">-->
+
+  <script>
+  function gel() {
+    document.getElementById("oculto_3").style.display = "block";
+    document.getElementById("clickgel").style.display = "none";
+  }
+  function desactivate_gel() {
+    document.getElementById("oculto_3").style.display = "none";
+    document.getElementById("clickgel").style.display = "block";
+    return false;
+  }
+  </script>
+
+  </body>
+</html>
