@@ -7,6 +7,7 @@
 
 <h2 align="left">What did we use?</h2>
 <p align="left">We used HTML5 for markup and CSS3 to style our web. Also, we used javascrpit to add some click events to make the final product more fun and interactive.</p>
+<p align="left">Desktop and mobile friendly 🤝 </p>
 
 <h2 align="left">Results</h2>
 <p align="left">We believe that we were able build a friendly website that meets its mission. What do you think?</p>
